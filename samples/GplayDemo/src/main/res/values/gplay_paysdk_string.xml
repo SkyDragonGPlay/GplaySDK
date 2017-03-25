@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="GplayThirdSdk_hintInputUsername">请输入帐号</string>
+    <string name="GplayThirdSdk_hintInputPassword">请输入密码</string>
+    <string name="GplayThirdSdk_hintInputPhone">请输入手机号码</string>
+    <string name="GplayThirdSdk_hintInputCode">请输入验证码</string>
+    <string name="GplayThirdSdk_doGetPassword">忘记密码?</string>
+    <string name="GplayThirdSdk_hintNewUsername">帐号，4&#8211;20个英文字符、数字</string>
+    <string name="GplayThirdSdk_hintNewPassword">密码，最少4个字符</string>
+    <string name="GplayThirdSdk_hintNewCode">验证码</string>
+    <string name="GplayThirdSdk_switchAccount">切换帐号</string>
+    <string name="GplayThirdSdk_actionLogin">正在登录</string>
+    <string name="GplayThirdSdk_actionAutoLogin">准备自动登录</string>
+    <string name="GplayThirdSdk_actionRegister">正在注册</string>
+    <string name="GplayThirdSdk_actionBind">正在提交绑定</string>
+    <string name="GplayThirdSdk_errorNetwork">网络不给力，请重试</string>
+    <string name="GplayThirdSdk_preparing">正在准备中&#8230;</string>
+    <string name="GplayThirdSdk_errorGetCode">获取验证码失败，请稍后重试</string>
+    <string name="GplayThirdSdk_errorSystem">系统错误，请稍后重试</string>
+    <string name="GplayThirdSdk_newBill">新订单</string>
+    <string name="GplayThirdSdk_billName">订单号</string>
+    <string name="GplayThirdSdk_billAmount">总金额</string>
+    <string name="GplayThirdSdk_alipay">支付宝</string>
+    <string name="GplayThirdSdk_upmp">银联支付</string>
+    <string name="GplayThirdSdk_createBill">正在生成订单&#8230;</string>
+    <string name="GplayThirdSdk_errorRegisterLogin">注册成功，登录失败，请重试登录</string>
+    <string name="GplayThirdSdk_tryAgain">再试一次</string>
+    <string name="GplayThirdSdk_payFailed">支付失败</string>
+    <string name="GplayThirdSdk_paySuccess">支付成功</string>
+    <string name="GplayThirdSdk_back">返回</string>
+</resources>

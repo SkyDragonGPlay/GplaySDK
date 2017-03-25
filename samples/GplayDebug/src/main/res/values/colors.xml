@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_dark_blue_FF303F9F">#303F9F</color>
+    <color name="color_light_gold_FFD700">#FFD700</color>
+    <color name="color_light_pink_FFFF4081">#FF4081</color>
+    <color name="color_dark_grey_FF1F1919">#1F1919</color>
+    <color name="color_dark_grey_FF1C1C1C">#1C1C1C</color>
+    <color name="color_light_grey_FFF0F0F0">#F0F0F0</color>
+    <color name="color_light_white_FFFFFFFF">#FFFFFF</color>
+    <color name="color_light_red_FFFF0000">#FF0000</color>
+    <color name="color_light_grey_FFE8E8E0">#E8E8E0</color>
+    <color name="color_light_grey_FFDBDBD3">#DBDBD3</color>
+    <color name="color_light_green_FF99CC00">#FF99CC00</color>
+    <color name="color_dark_green_FF6D9B00">#FF6D9B00</color>
+    <color name="color_dark_blue_FF00719B">#FF00719B</color>
+
+
+
+    <!-- color for progress btn -->
+    <color name="cpb_grey">#ffdedede</color>
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_blue_dark">#ff00719b</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_red_dark">#ffcd3a3a</color>
+    <color name="cpb_green">#ff99cc00</color>
+    <color name="cpb_green_dark">#ff6d9b00</color>
+    <color name="cpb_white">@android:color/white</color>
+</resources>

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:progressbar="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/loading_dialog_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.zhy.view.RoundProgressBarWidthNumber
+                android:id="@+id/loading_dialog_progress"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                progressbar:progress_text_size="20sp"
+                progressbar:progress_text_color="@color/select_block"
+                progressbar:progress_text_offset="10dp"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/loading_dialog_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="正在加载"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

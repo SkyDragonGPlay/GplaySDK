@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+</body>
+</html>
+
+<script>
+    runGplayGame();
+    function runGplayGame() {
+        var url = location.search; //获取url中"?"符后的字串
+        var strs;
+        var params = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                params[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+            }
+        }
+        var serverHost = "gplay://gplay_channel_666666";
+        var clientid = params['client_id'];
+        var orientation = params['orientation'];
+
+        var loadDateTime = new Date();
+        window.setTimeout(function() {
+                    var timeOutDateTime = new Date();
+                    if (timeOutDateTime - loadDateTime < 5000) {
+                        window.location.href = "http://api.skydragon-inc.cn/resource/download/id/32";
+                    } else {
+                        window.close();
+                    }
+                },
+                25);
+
+        window.location.href = serverHost + '?client_id=' + clientid + '&orientation=' + orientation;
+    }
+</script>

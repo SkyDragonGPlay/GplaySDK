@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressbar="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="150dp">
+
+    <LinearLayout
+        android:background="@color/color_light_gold_FFD700"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp">
+        <TextView
+            android:id="@+id/scene_info_txt"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="12sp"/>
+
+        <com.zhy.view.HorizontalProgressBarWithNumber
+            android:id="@+id/scene_loading_progress"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:visibility="invisible"
+            progressbar:progress_text_size="20sp"
+            progressbar:progress_text_color="@color/color_dark_blue_FF00719B"
+            progressbar:progress_text_offset="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="32dp"
+        android:orientation="vertical"
+        android:layout_height="150dp">
+        <TextView
+            android:id="@+id/result_status"
+            android:background="@color/color_light_green_FF99CC00"
+            android:layout_weight="1"
+            android:text="成功"
+            android:textSize="30sp"
+            android:textColor="@color/color_light_white_FFFFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleX="2.0"
+            android:scaleY="2.0"
+            android:checked="false" />
+    </LinearLayout>
+</LinearLayout>

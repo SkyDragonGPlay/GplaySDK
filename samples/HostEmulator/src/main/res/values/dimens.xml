@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- listview config -->
+    <dimen name="listview_icon_size">58dp</dimen>
+    <dimen name="listview_icon_frame_size">60dp</dimen>
+    <dimen name="listview_icon_margin">6dp</dimen>
+    <dimen name="listview_item_height">60dp</dimen>
+    <dimen name="listview_process_btn_widht">80dp</dimen>
+    <dimen name="listview_detail_padding">8dp</dimen>
+    <!-- font size -->
+    <dimen name="font_small_size">12dp</dimen>
+    <dimen name="font_normal_size">14dp</dimen>
+    <dimen name="font_medium_size">16dp</dimen>
+    <dimen name="font_large_size">18dp</dimen>
+    <dimen name="font_xlarge_size">22dp</dimen>
+    <!-- common button size -->
+    <dimen name="common_btn_size">40dp</dimen>
+    <dimen name="common_btn_width">66dp</dimen>
+    <dimen name="common_btn_height">35dp</dimen>
+</resources>

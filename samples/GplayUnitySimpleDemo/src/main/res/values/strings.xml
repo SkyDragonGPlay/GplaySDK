@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">GplayDemo</string>
+
+    <string name="ok">确定</string>
+    <string name="demo_cancel">取消</string>
+    <string name="title_game">游戏</string>
+
+    <string name="download_open">打开</string>
+    <string name="set">设置</string>
+
+    <string name="set_channel_id">设置渠道ID</string>
+    <string name="set_rootpath">设置根目录</string>
+
+    <string name="product_dialog_title">请选择运行环境</string>
+
+    <array name="product_modes_title">
+        <item>线上服务器</item>
+        <item>沙箱服务器</item>
+        <item>开发服务器</item>
+    </array>
+
+    <array name="product_modes_value">
+        <item>online</item>
+        <item>sandbox</item>
+        <item>develop</item>
+    </array>
+
+    <string-array name="values_list">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="entry_list">
+        <item>GplayPaySDKH5</item>
+        <item>GplayPaySDK</item>
+    </string-array>
+
+    <string-array name="channel_progress">
+        <item>false</item>
+        <item>true</item>
+    </string-array>
+</resources>

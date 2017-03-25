@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:key="channel_id"
+        android:title="@string/config_set_channelid"/>
+
+    <EditTextPreference
+        android:key="game_key"
+        android:title="@string/config_set_game_key"/>
+</PreferenceScreen>

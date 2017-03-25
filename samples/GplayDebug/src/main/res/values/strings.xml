@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">GpalyDebug</string>
+    <string name="menu_aciton_setting">debug 配置</string>
+    <string name="loading">加载中...</string>
+    <string name="cleaning">清除中...</string>
+    <string name="runtime_init">初始化...</string>
+    <string name="searching">查询中...</string>
+    <string name="runtime_init_success">Runtime 初始化成功</string>
+    <string name="runtime_init_failure">Runtime 初始化成功</string>
+    <string name="runtime_init_failure_info">未成功初始化 Runtime !</string>
+
+    <string name="slide_open">打开侧边栏</string>
+    <string name="slide_close">关闭侧边栏.</string>
+
+    <string name="complete_download">下载成功</string>
+    <string name="state_chosen">选中</string>
+    <string name="error_download">下载失败</string>
+    <string name="upload">更新</string>
+
+    <string name="dialog_confirm">确定</string>
+    <string name="dialog_cancele">取消</string>
+    <string name="error_game_info">游戏信息加载异常！</string>
+    <string name="select_delete_game">删除的游戏!</string>
+    <string name="no_downloaded_game">本地无游戏!</string>
+    <string name="choose_game">选择游戏:</string>
+
+
+    <!-- config settings -->
+    <string name="config_set">设置</string>
+    <string name="config_channelid">渠道ID : </string>
+    <string name="config_game_key"> GameKey : </string>
+    <string name="config_set_channelid">设置渠道 ID</string>
+    <string name="config_set_game_key">设置 GameKey</string>
+    <string name="config_set_rootpath">设置根目录</string>
+
+
+    <string name="dialog_title_game_info">游戏信息</string>
+    <string name="dialog_title_scene_info">场景信息</string>
+
+    <string name="start_slient_downloading">开启静默下载</string>
+    <string name="pause_slient_downloading">停止静默下载</string>
+    <string name="please_pause_slient_downloading">请先暂停静默下载！</string>
+    <string name="preload_scene">下载场景</string>
+    <string name="check_scene">检测场景</string>
+    <string name="checking">检测中...</string>
+    <string name="preloading_scene">下载场景中...</string>
+    <string name="downloading_groups">正在下载分组:</string>
+    <string name="btn_gplay_runtime_load_init">初始化Runtime</string>
+    <string name="runtime_load_fail">Gplay Runtime 加载失败!</string>
+    <string name="search_failure">查询失败！</string>
+
+
+
+    <string name="failure">失败</string>
+    <string name="completed">完成</string>
+    <string name="processing">下载中</string>
+    <!-- title -->
+    <string name="title_loading_runtime_and_config">加载 Runtime 与游戏配置</string>
+    <string name="title_download_res">加载游戏必须资源</string>
+    <string name="title_service_download_res">检测服务下载资源</string>
+    <string name="title_start_download_res">测试Runtime资源加载</string>
+    <string name="title_gameing">测试静默下载与主动下载</string>
+</resources>

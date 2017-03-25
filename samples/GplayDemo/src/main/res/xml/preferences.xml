@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference
+        android:key="channel_id"
+        android:title="@string/set_channel_id"
+        android:defaultValue="100000" />
+    <EditTextPreference
+        android:key="rootpath"
+        android:title="@string/set_rootpath"/>
+    <ListPreference
+        android:key="product_mode"
+        android:title="运行环境"
+        android:entries="@array/product_modes_title"
+        android:entryValues="@array/product_modes_value"
+        android:dialogTitle="@string/product_dialog_title"/>
+    <ListPreference
+        android:key="sdk_choose"
+        android:title="支付SDK"
+        android:entries="@array/entry_list"
+        android:entryValues="@array/values_list"
+        android:dialogTitle="选择支付 sdk" />
+    <ListPreference
+        android:key="channel_progress"
+        android:title="进度条定制"
+        android:entries="@array/channel_progress"
+        android:entryValues="@array/values_list"
+        android:dialogTitle="选择渠道定制进度条" />
+    <ListPreference
+        android:key="predowngame_strategy"
+        android:title="预下载游戏策略"
+        android:entries="@array/predowngame_strategy"
+        android:entryValues="@array/predowngame_values"
+        android:dialogTitle="选择预下载游戏策略" />
+    <ListPreference
+        android:key="bghang_option"
+        android:title="后台挂起下载开关"
+        android:entries="@array/backgroundhang_option"
+        android:entryValues="@array/values_list"
+        android:dialogTitle="选择后台挂起下载开关" />
+</PreferenceScreen>

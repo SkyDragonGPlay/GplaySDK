@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+    </style>
+
+    <style name="AppTheme.AppBarOverlay"/>
+
+    <style name="AppTheme.PopupOverlay"/>
+
+    <style name="starSmallRatingBar">
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:minHeight">11dip</item>
+        <item name="android:maxHeight">11dip</item>
+    </style>
+
+    <style name="gplay_subject_text_style">
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_apk_name</item>
+    </style>
+</resources>

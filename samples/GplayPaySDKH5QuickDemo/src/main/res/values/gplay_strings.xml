@@ -1,0 +1,9 @@
+<resources>
+    <string name="gplay_app_name">GplayQuickDemo</string>
+
+    <string name="gplay_ok">确定</string>
+    <string name="gplay_demo_cancel">取消</string>
+    <string name="gplay_title_game">游戏</string>
+
+    <string name="gplay_download_open">打开</string>
+</resources>

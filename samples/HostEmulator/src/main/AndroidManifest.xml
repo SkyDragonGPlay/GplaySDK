@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.skydradgon.host.emulator"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.Android.com/tools">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="22"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+
+    <uses-feature android:glEsVersion="0x00020000"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name="com.skydragon.gplay.demo.GameActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|mcc|mnc"
+            android:launchMode="singleTask"
+            android:process=":gplay"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.skydragon.gplay.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- 以下host中666666请替换成自己的渠道号 -->
+                <data
+                    android:host="gplay_channel_666666"
+                    android:scheme="gplay_emulator"/>
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.skydragon.gplay.demo.HostEmulator"
+            android:process=":gplay">
+            <intent-filter>
+                <action android:name="com.skydragon.gplay.COMMAND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.skydragon.gplay.demo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="bind">绑定手机</string>
+    <string name="pay">支付</string>
+    <string name="getUser">用户信息</string>
+    <string name="deleteAllUser">删除所有用户</string>
+    <string name="setUserExpires">使用户过期</string>
+</resources>

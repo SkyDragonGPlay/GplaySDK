@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gplay_paysdk_bg_landscape">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:id="@+id/back"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/gplay_paysdk_back"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/gplay_paysdk_register"
+            android:contentDescription="@android:string/ok"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:background="#00000000" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/gplay_paysdk_username"
+            android:scaleType="fitCenter"
+            android:contentDescription="@android:string/ok" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/username"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:hint="@string/GplayThirdSdk_hintNewUsername"
+            android:textColorHint="#999"
+            android:background="@drawable/gplay_paysdk_box" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/gplay_paysdk_password"
+            android:scaleType="fitCenter"
+            android:contentDescription="@android:string/ok" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/userpwd"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:hint="@string/GplayThirdSdk_hintNewPassword"
+            android:textColorHint="#999"
+            android:inputType="textVisiblePassword"
+            android:background="@drawable/gplay_paysdk_box" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/gplay_paysdk_phone"
+            android:scaleType="fitCenter"
+            android:contentDescription="@android:string/ok" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/phone"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:hint="@string/GplayThirdSdk_hintInputPhone"
+            android:textColorHint="#999"
+            android:background="@drawable/gplay_paysdk_box"
+            android:inputType="phone" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginRight="150dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/gplay_paysdk_code"
+            android:scaleType="fitCenter"
+            android:contentDescription="@android:string/ok"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/imageViewCode" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/code"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:background="@drawable/gplay_paysdk_box"
+            android:inputType="number"
+            android:hint="@string/GplayThirdSdk_hintNewCode"
+            android:layout_toLeftOf="@+id/layoutGetCode"
+            android:layout_toRightOf="@+id/imageViewCode"
+            android:layout_marginRight="10dp" />
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:id="@+id/layoutGetCode">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/getCode"
+                android:src="@drawable/gplay_paysdk_get_code"
+                android:scaleType="fitCenter"
+                android:contentDescription="@android:string/ok"
+                android:background="#00000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sendCodeAgain"
+                android:background="#00000000"
+                android:textColor="#333"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:src="@drawable/gplay_paysdk_btn_register"
+        android:scaleType="fitCenter"
+        android:contentDescription="@android:string/ok"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/commit"
+        android:background="#00000000" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginRight="170dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        android:id="@+id/layoutDo">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/doRegister"
+            android:layout_weight="1"
+            android:src="@drawable/gplay_paysdk_btn_register"
+            android:scaleType="fitXY"
+            android:contentDescription="@android:string/ok"
+            android:background="#00000000" />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/goLogin"
+            android:layout_weight="1"
+            android:src="@drawable/gplay_paysdk_go_login"
+            android:layout_marginLeft="20dp"
+            android:scaleType="fitXY"
+            android:contentDescription="@android:string/ok"
+            android:background="#00000000" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewError"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#f45050"
+        android:textSize="16sp"
+        android:background="@drawable/gplay_paysdk_rectangle"
+        android:padding="6dp"
+        android:visibility="gone" />
+
+</LinearLayout>

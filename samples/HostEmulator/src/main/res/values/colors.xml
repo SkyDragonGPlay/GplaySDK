@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="color_apk_name">@color/black_content_color</color>
+    <color name="color_package_size">@color/grey_content_color</color>
+    <color name="color_listview_background">#f7f7f7</color>
+    <color name="select_block">@color/sub_title_color</color>
+    <color name="progressbar_bg">#CCCCCC</color>
+    <color name="sub_title_color">#339900</color>
+    <color name="black_content_color">#555555</color>
+    <color name="grey_content_color">#959595</color>
+    <drawable name="open_color">@color/black_content_color</drawable>
+    <drawable name="install_color">#339900</drawable>
+    <drawable name="pressed_color">@color/white</drawable>
+    <drawable name="transparent_background">#c0000000</drawable>
+</resources>

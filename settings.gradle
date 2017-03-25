@@ -1,0 +1,64 @@
+include ':GplayAsyncHttp', ':GPlayExtendTest'
+project(':GplayAsyncHttp').projectDir = new File('../GplaySDK/library/GplayAsyncHttp')
+
+include ':GplayChannelPaySDK'
+project(':GplayChannelPaySDK').projectDir = new File('../SkyDragonSDK/GplayChannelPaySDK')
+
+include ':GplayChannelH5PaySDK'
+project(':GplayChannelH5PaySDK').projectDir = new File('../SkyDragonSDK/GplayChannelH5PaySDK')
+
+include ':GplaySkyDragonSDK'
+project(':GplaySkyDragonSDK').projectDir = new File('../SkyDragonSDK/GplaySkyDragonSDK')
+
+include ':frameworks:GplayRuntimeSDK'
+project(':frameworks:GplayRuntimeSDK').projectDir = new File('../GplayRuntime/frameworks/GplayRuntimeSDK')
+
+include ':frameworks:GplayUnitSDK'
+project(':frameworks:GplayUnitSDK').projectDir = new File('../GPlayUnitSDK/GplayUnitSDK')
+
+include ':frameworks:GplayUnitSDKBridge'
+project(':frameworks:GplayUnitSDKBridge').projectDir = new File('../GPlayUnitSDK/GplayUnitSDKBridge')
+
+include ':frameworks:GplayRuntimeParams'
+project(':frameworks:GplayRuntimeParams').projectDir = new File('../GplayRuntime/frameworks/GplayRuntimeParams')
+
+include ':engines:CocosEngine'
+project(':engines:CocosEngine').projectDir = new File('../GPlayCPSDKCore/engines/CocosEngine')
+
+include ':engines:CocosEngineV2'
+project(':engines:CocosEngineV2').projectDir = new File('../GPlayCPSDKCore/engines/CocosEngineV2')
+
+include ':engines:GplayEngineBridge'
+project(':engines:GplayEngineBridge').projectDir = new File('../GplayRuntime/engines/GplayEngineBridge')
+
+include ':GplayChannelNduoPlugin'
+project(':GplayChannelNduoPlugin').projectDir = new File('../GplayChannelPlugin/GplayChannelNduoPlugin')
+
+include ':GplayChannelH5PaySDKPlugin'
+project(':GplayChannelH5PaySDKPlugin').projectDir = new File('../GplayChannelPlugin/GplayChannelH5PaySDKPlugin')
+
+include ':GplayChannelPaySDKPlugin'
+project(':GplayChannelPaySDKPlugin').projectDir = new File('../GplayChannelPlugin/GplayChannelPaySDKPlugin')
+
+include ':GPlayUnityRuntime'
+project(':GPlayUnityRuntime').projectDir = new File('../GPlayUnity/UnityEngine')
+
+include ':EditorTestASProj'
+project(':EditorTestASProj').projectDir = new File('../GPlayUnity/sample/EditorTestASProj')
+
+include ':UnitySimpleDemo'
+project(':UnitySimpleDemo').projectDir = new File('../GPlayUnity/sample/UnitySimpleDemo')
+
+include ':frameworks:GplaySDK'
+include ':frameworks:GplayRuntimeBridge'
+include ':frameworks:GplayUnitSDKPlugin'
+include ':library:GplaySuspensionPoint'
+include ':library:NoHttp'
+include ':samples:GplayDemo'
+include ':samples:GplayEmulator'
+include ':samples:HostEmulator'
+include ':samples:GplayQuickDemo'
+include ':samples:GplayPaySDKH5QuickDemo'
+include ':samples:GplayUnitySimpleDemo'
+include ':samples:GplayUnityEmulator'
+//include ':samples:GplayDebug'

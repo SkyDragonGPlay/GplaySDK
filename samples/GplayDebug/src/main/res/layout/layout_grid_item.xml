@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/color_light_grey_FFE8E8E0"
+        android:gravity="center"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_height="70dp"
+        android:layout_width="match_parent">
+        <TextView
+            android:id="@+id/scene_info_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.skydragon.gplaydebug.view.progressbtn.CircularProgressButton
+            android:id="@+id/scene_loading_btn"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/cpb_white"
+            android:textSize="18sp"
+            app:cpb_textComplete="@string/complete_download"
+            app:cpb_textChosen="@string/state_chosen"
+            app:cpb_textError="@string/error_download"
+            app:cpb_textIdle="@string/upload" />
+    </LinearLayout>
+</LinearLayout>

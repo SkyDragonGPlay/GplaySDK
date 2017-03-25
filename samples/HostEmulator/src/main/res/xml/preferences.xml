@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference
+        android:key="channel_id"
+        android:title="@string/set_channel_id"
+        android:defaultValue="666666" />
+    <EditTextPreference
+        android:key="rootpath"
+        android:title="@string/set_rootpath"/>
+</PreferenceScreen>

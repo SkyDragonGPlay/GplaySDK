@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/action_settings"
+            android:title="@string/menu_aciton_setting"
+            android:icon="@drawable/ic_more_tools"
+            android:orderInCategory="0"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_delete"
+            android:title="删除资源"
+            android:icon="@drawable/ic_more_tools"
+            android:orderInCategory="1"
+            app:showAsAction="never"/>
+</menu>

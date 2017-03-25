@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HostEmulator</string>
+
+    <string name="ok">确定</string>
+    <string name="demo_cancel">取消</string>
+    <string name="title_game">游戏</string>
+
+    <string name="download_open">打开</string>
+    <string name="set">设置</string>
+
+    <string name="set_channel_id">设置渠道ID</string>
+    <string name="set_rootpath">设置根目录</string>
+
+</resources>

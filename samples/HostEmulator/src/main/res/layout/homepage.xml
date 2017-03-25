@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_listview_background"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/game_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:text="@string/title_game"
+            android:textColor="#339900" />
+        
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/title"
+            android:padding="10dp"
+            android:textSize="12dp"
+            android:textColor="#339900" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_alignBottom="@+id/title"
+            android:layout_height="3dp"
+            android:background="#339900" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="设置" />
+    <ListView
+        android:id="@+id/game_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/game_title"
+        android:layout_above="@id/setting_btn"
+        android:dividerHeight="2px"
+        android:cacheColorHint="#0000" 
+        android:divider="@android:drawable/divider_horizontal_dim_dark" />
+
+</RelativeLayout>

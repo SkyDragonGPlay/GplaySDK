@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_listview_background"
+    android:layout_marginRight="@dimen/listview_icon_margin" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/listview_icon_size"
+        android:layout_height="@dimen/listview_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/listview_icon_margin"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/listview_icon_margin"
+        android:layout_marginLeft="@dimen/listview_icon_margin"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_apk_name"
+        android:textSize="@dimen/font_large_size" />
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dip"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/download_open"
+        android:textColor="@drawable/btn_install_color"
+        android:background="@drawable/btn_install"/>
+
+
+</RelativeLayout>

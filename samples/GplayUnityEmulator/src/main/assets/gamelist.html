@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport"content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>游戏列表</title>
+    <!-- <link rel="stylesheet" type="text/css" href="gamelist.css"> -->
+    <style type="text/css">
+html body{margin:0;padding:0;font-size:16px;background-color:#FCFCF8}ul{margin:0;padding:0}.fl{float:left}.fr{float:right}.clear{clear:both}.mt2{margin-top:2px}.mt5{margin-top:5px}.mt7{margin-top:7px}.mt10{margin-top:10px}.tc{text-align:center}.header{padding:10px 0 0 0;font-size:1.2em;width:100%;height:40px;position:fixed;top:0;left:0;z-index:10;line-height:30px;background:#33A6B8;background:linear-gradient(#33A6B8,#81C7D4)}.milky{display:block;color:#333;text-shadow:0 3px 3px #8eec9d,0 -2px 1px #fff;font-weight:700;text-align:center}.dash{border-top:1px dashed #ddd}.btn{position:relative;display:inline-block;padding:5px 10px;font-size:13px;font-weight:700;line-height:18px;color:#333;white-space:nowrap;vertical-align:middle;cursor:pointer;background-color:#eee;background-image:-webkit-linear-gradient(#fcfcfc,#eee);background-image:linear-gradient(#fcfcfc,#eee);background-repeat:repeat-x;border:1px solid #d5d5d5;border-radius:3px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-appearance:none}.btn:active,.btn:hover{text-decoration:none;background-color:#ddd;background-image:-webkit-linear-gradient(#eee,#ddd);background-image:linear-gradient(#eee,#ddd);background-repeat:repeat-x;border-color:#ccc}.blueBtn{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.15);background-color:#33A6B8;background-image:-webkit-linear-gradient(#81C7D4,#33A6B8);background-image:linear-gradient(#81C7D4,#33A6B8);background-repeat:repeat-x;border-color:#A5DEE4}.blueBtn:hover,.blueBtn:active{color:#fff;background-color:#0089A7;background-image:-webkit-linear-gradient(#58B2DC,#0089A7);background-image:linear-gradient(#58B2DC,#0089A7);background-repeat:repeat-x;border-color:#A5DEE4}.greenBtn{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.15);background-color:#60b044;background-image:-webkit-linear-gradient(#8add6d,#60b044);background-image:linear-gradient(#8add6d,#60b044);background-repeat:repeat-x;border-color:#5ca941}.greenBtn:active,.greenBtn:hover{color:#fff;background-color:#569e3d;background-image:-webkit-linear-gradient(#79d858,#569e3d);background-image:linear-gradient(#79d858,#569e3d);background-repeat:repeat-x;border-color:#4a993e}.redBtn{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.15);background-color:#b33630;background-image:-webkit-linear-gradient(#dc5f59,#b33630);background-image:linear-gradient(#dc5f59,#b33630);background-repeat:repeat-x;border-color:#cd504a}.redBtn:active,.redBtn:hover{color:#fff;background-color:#ddd;background-image:-webkit-linear-gradient(#dc5f59,#b33630);background-image:linear-gradient(#dc5f59,#b33630);background-repeat:repeat-x}.listArea{margin-top:50px;margin-bottom:50px}.listItem{list-style-type:none;border-bottom:1px solid #ddd;padding:10px}.itemLeft{float:left}.itemMiddle{float:left;margin-top:2px;margin-left:12px;max-width:46%}.itemRight{float:right}.itemIcon{margin-top:5px;width:60px;border-radius:10px}.itemTitle{margin-top:5px}.itemDesc{margin-top:5px;color:grey;font-size:.8em}.itemButton{margin-right:10px}.functionArea{position:fixed;bottom:0;width:100%;height:50px;background:#8add6d;background:linear-gradient(#33A6B8,#0C4842)}.btnArea{padding:9px 0 9px 0}
+    </style>
+</head>
+
+<body>
+<div class="header tc">
+    <div class="headerText milky">游戏列表</div>
+    <div class="dash mt7"></div>
+</div>
+<div class="listArea">
+    <ul id="gameList"> </ul>
+</div>
+<div class="functionArea">
+    <div class="dash mt2"></div>
+    <div class="btnArea tc"></div>
+</div>
+
+
+
+</body>
+
+<script type="text/javascript" charset="utf-8">
+var serverHost = window.Gplay.getGameListUrl();
+var serverHost;
+var xmlHttp;
+var gameConfigArray = [];
+
+var log = function (obj) {
+    console.log(obj);
+}
+
+window.onload = function () {
+    requestGameList(getServerUrl());
+}
+
+var getServerUrl = function () {
+    var url = location.search; //获取url中"?"符后的字串
+    log(url)
+    var strs;
+    var params = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            params[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    var channelCode = params['channel_code'];
+    return serverHost + '?channel_code=' + channelCode + '&start=0&len=2147483647';
+}
+
+var initGameList = function (arr) {
+    for (var i = 0; i < arr.length; i++) {
+        gameConfigArray.push({
+            title: arr[i].game_name,
+            desc: arr[i].description,
+            iconUrl : arr[i].icon_link,
+            jsonStr: JSON.stringify(arr[i])
+        });
+    }
+
+    loadGameInfo();
+}
+
+var loadGameInfo = function () {
+    var html = [];
+    for (var i = 0; i < gameConfigArray.length; i++) {
+        var item = gameConfigArray[i];
+        html.push('<li class="listItem">');
+        html.push('     <div class="itemLeft">');
+        html.push('         <img class="itemIcon" src="' + item.iconUrl + '">');
+        html.push('     </div>');
+        html.push('     <div class="itemMiddle">');
+        html.push('         <div class="itemTitle">' + item.title + '</div>');
+        html.push('         <div class="itemDesc">' + item.desc + '</div>');
+        html.push('     </div>');
+        html.push('     <div class="itemRight">');
+        html.push('         <div class="itemButton">');
+        html.push('             <UnityCamera class="btn blueBtn" onclick="runGplayGame(' + i + ')">开始游戏</UnityCamera>');
+        html.push('             <div class="mt10"></div>');
+        html.push('         </div>');
+        html.push('     </div>');
+        html.push('     <div class="clear"></div>');
+        html.push('</li>');
+    }
+    var ulElement = document.getElementById("gameList");
+    ulElement.innerHTML = html.join('');
+}
+
+var getGameInfo = function (index) {
+    return gameConfigArray[index];
+}
+
+var runGplayGame = function (index) {
+    log("runGplayGame ...");
+    var gameInfo = getGameInfo(index);
+    if (gameInfo) {
+        var gameInfoJson = JSON.parse(gameInfo.jsonStr);
+        var gplayGameInfoJson = {"client_id": gameInfoJson.client_id, "orientation": gameInfoJson.orientation};
+        log("runGplayGame gplayGameInfoJson " + JSON.stringify(gplayGameInfoJson));
+        window.Gplay.runGame(JSON.stringify(gplayGameInfoJson));
+    } else {
+        log("can't find the game");
+    }
+}
+
+
+function requestGameList(url)
+{
+    log("requestGameList: " + url);
+    xmlHttp=null;
+    if (window.XMLHttpRequest) {// code for all new browsers
+        xmlHttp=new XMLHttpRequest();
+    } else if (window.ActiveXObject) {// code for IE5 and IE6
+        xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if (xmlHttp!=null) {
+        xmlHttp.onreadystatechange=state_Change;
+        xmlHttp.open("GET",url,true);
+        xmlHttp.send(null);
+    } else {
+        alert("Your browser does not support XMLHTTP.");
+    }
+}
+
+function state_Change() {
+    log("state_Change!");
+    if (xmlHttp.readyState==4) {// 4 = "loaded"
+        log("xmlHttp.readyState==4!");
+        if (xmlHttp.status==200) {// 200 = OK
+            log(xmlHttp.responseText);
+            initGameList(JSON.parse(xmlHttp.responseText).data.games);
+        } else {
+            alert("Problem retrieving XML data");
+        }
+    }
+}
+
+</script>
+</html>

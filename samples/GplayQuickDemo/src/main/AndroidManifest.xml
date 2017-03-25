@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.skydragon.gplay.demo.quick"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="11"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gplay_icon"
+        android:supportsRtl="true"
+        android:label="@string/gplay_app_name">
+        <activity
+            android:name="com.skydragon.gplay.Html5GameListActivity"
+            android:label="@string/gplay_app_name"
+            android:launchMode="singleTop"
+            android:icon="@drawable/gplay_icon"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="orientation|keyboard|screenSize|mcc|mnc">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.skydragon.gplay.GameActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|mcc|mnc"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:process=":gplay">
+            <intent-filter>
+                <action android:name="com.skydragon.gplay.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- 以下host中666666请替换成自己的渠道号 -->
+                <data android:host="gplay_channel_666666" android:scheme="gplay"/>
+            </intent-filter>
+        </activity>
+        <!-- 预下载使用服务,可选 -->
+        <service android:name="com.skydragon.gplay.service.PrepareRuntimeService"
+                 android:exported="false"
+                 android:process=":GPLAY_PREPARE_PROCESS" >
+            <intent-filter>
+                <action android:name="com.skydragon.gplay.demo.service.PREPARE_RUNTIME_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

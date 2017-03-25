@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gplay_color_listview_background">#f7f7f7</color>
+    <drawable name="gplay_transparent_background">#c0000000</drawable>
+</resources>
